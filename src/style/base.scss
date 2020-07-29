@@ -1,0 +1,10 @@
+body {
+    margin: 0px;
+    font-family: 'Metal Mania', cursive;
+    background-color: salmon;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
