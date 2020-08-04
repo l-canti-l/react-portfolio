@@ -116,7 +116,7 @@ export default class BlogForm extends Component {
           featured_image: ""
         });
 
-        this.props.handleSuccessfullFormSubmission(
+        this.props.handleSuccessfulFormSubmission(
           response.data.portfolio_blog
         );
       })
