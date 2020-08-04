@@ -9,7 +9,7 @@ export default class RichTextEditor extends Component {
     super(props);
 
     this.state = {
-      editorState: EditorState.createEmpty()
+      editorState: EditorState.createEmpty(),
     };
 
     this.onEditorStateChange = this.onEditorStateChange.bind(this);
@@ -48,7 +48,7 @@ export default class RichTextEditor extends Component {
 
   uploadFile(file) {
     return new Promise((resolve, reject) => {
-      this.getBase64(file, data => resolve({ data: { link: data } }));
+      this.getBase64(file, data => resolve({data: { link: data } }));
     });
   }
 
@@ -56,19 +56,19 @@ export default class RichTextEditor extends Component {
     return (
       <div>
         <Editor
-          editorState={this.state.editorState}
+            editorState={this.state.editorState}
           wrapperClassName="demo-wrapper"
           editorClassname="demo-editor"
           onEditorStateChange={this.onEditorStateChange}
           toolbar={{
             inline: { inDropdown: true },
             list: { inDropdown: true },
-            textAlign: { inDropdown: true },
+            textAlign: { inDropdown: true},
             link: { inDropdown: true },
             history: { inDropdown: true },
             image: {
               uploadCallback: this.uploadFile,
-              alt: { present: true, mandatory: false },
+              alt: { present: true, manditory: false},
               previewImage: true,
               inputAccept: "image/gif,image/jpeg,image/jpg,image/png,image/svg"
             }
