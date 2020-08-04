@@ -15,20 +15,20 @@ export default class BlogModal extends Component {
         left: "50%",
         right: "auto",
         marginRight: "-50%",
-        transform: "translate(-50%, -50%)",
-        width: "800px",
+        transform: "translate(-50%, -50%",
+        width: "800px"
       },
       overlay: {
-        backgroundColor: "rgba(1, 1, 1, 0.75)",
-      },
+        backgroundColor: "rgba(1, 1, 1, 0.75)"
+      }
     };
 
-    this.handleSuccessfulFormSubmission = this.handleSuccessfulFormSubmission.bind(
+    this.handleSuccessfullFormSubmission = this.handleSuccessfullFormSubmission.bind(
       this
     );
   }
 
-  handleSuccessfulFormSubmission(blog){
+  handleSuccessfullFormSubmission(blog) {
     this.props.handleSuccessfulNewBlogSubmission(blog);
   }
 
@@ -41,7 +41,9 @@ export default class BlogModal extends Component {
         }}
         isOpen={this.props.modalIsOpen}
       >
-        <BlogForm handleSuccessfulFormSubmission={this.handleSuccessfulFormSubmission} />
+        <BlogForm
+          handleSuccessfullFormSubmission={this.handleSuccessfullFormSubmission}
+        />
       </ReactModal>
     );
   }
